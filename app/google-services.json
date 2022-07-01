@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "362479519270",
+    "firebase_url": "https://el-dia-a-dia-90ecb-default-rtdb.firebaseio.com",
+    "project_id": "el-dia-a-dia-90ecb",
+    "storage_bucket": "el-dia-a-dia-90ecb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:362479519270:android:ff35bd28f3faa4fc4e48e7",
+        "android_client_info": {
+          "package_name": "com.example.eldiaadia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "362479519270-00cgjievmsu0rvfdqp5mtnujnml8m6lg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.eldiaadia",
+            "certificate_hash": "085564e4c24fbe551e67a1f76ea8b109d7143692"
+          }
+        },
+        {
+          "client_id": "362479519270-j7ie26lm4sh927ud25o9fctaod36c6j6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6wzgrok48Y0ICE2P8C8_Zq3OELoLQORU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "362479519270-j7ie26lm4sh927ud25o9fctaod36c6j6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
