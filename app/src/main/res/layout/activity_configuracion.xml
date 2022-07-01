@@ -34,21 +34,24 @@
                 android:id="@+id/CambiarHora_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="btn_CambiarHora"
                 android:text="@string/HoraFrase" />
 
             <TimePicker
-                android:id="@+id/Configuracion_TimeKiper"
+                android:id="@+id/Configuracion_TimePicker"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:headerBackground="@color/design_default_color_primary"
                 android:numbersSelectorColor="@color/design_default_color_primary"
-                android:visibility="visible" />
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/guardarHora_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/GuardarHora" />
+                android:onClick="btn_GuardarHora"
+                android:text="@string/GuardarHora"
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/VerFrasesAnuladas_button"
