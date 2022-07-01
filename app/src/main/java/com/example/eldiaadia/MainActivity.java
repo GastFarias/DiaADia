@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
                             CodigoDia = (int) (CodigoDia - (cant));
                         }
                     }
-                    TV_frase.setText(frase);
+                    TV_frase.setText("" + frase + "\n");
 
                 }
 
