@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10sp"
+    tools:context=".Configuracion_Activity">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/ConfigTitulo_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:gravity="center|center_vertical"
+                android:text="@string/btn_IrConfigurar"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textSize="34sp" />
+
+            <Button
+                android:id="@+id/CambiarHora_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/HoraFrase" />
+
+            <TimePicker
+                android:id="@+id/Configuracion_TimeKiper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:headerBackground="@color/design_default_color_primary"
+                android:numbersSelectorColor="@color/design_default_color_primary"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/guardarHora_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/GuardarHora" />
+
+            <Button
+                android:id="@+id/VerFrasesAnuladas_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/VerFrasesAnuladas" />
+
+            <Switch
+                android:id="@+id/HabilitarNotificaciones_switch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:minHeight="48dp"
+                android:text="@string/HabilitarNotificaciones" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/irInicio_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginEnd="5sp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="irFrase"
+            android:text="@string/btn_irFrase"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/irAgregarAviso_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="5sp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="irAgregarAvisos"
+            android:text="@string/btn_irAgregarAvisos"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

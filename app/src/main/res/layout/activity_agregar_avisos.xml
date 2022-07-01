@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10sp"
+    tools:context=".AgregarAvisos_Activity">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/TituloNuevoAviso_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="@string/btn_irAgregarAvisos"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textSize="34sp" />
+
+        <EditText
+            android:id="@+id/NombreAviso_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/NombreAnuncio"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:autofillHints="" />
+
+        <Button
+            android:id="@+id/HoraNuevoAviso_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/SeleccionarHora" />
+
+        <TimePicker
+            android:id="@+id/NuevoAviso_TimePiker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:headerBackground="@color/design_default_color_primary"
+            android:numbersSelectorColor="@color/design_default_color_primary"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/GuardarHora_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/GuardarHora"
+            android:visibility="gone" />
+
+        <CheckBox
+            android:id="@+id/lunes_checkBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Lunes" />
+
+        <CheckBox
+            android:id="@+id/martes_checkBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Martes" />
+
+        <CheckBox
+            android:id="@+id/miercoles_checkBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Miercoles" />
+
+        <CheckBox
+            android:id="@+id/jueves_checkBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Jueves" />
+
+        <CheckBox
+            android:id="@+id/viernes_checkBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Viernes" />
+
+        <CheckBox
+            android:id="@+id/sabado_checkBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Sábado" />
+
+        <CheckBox
+            android:id="@+id/Domingo_checkBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Domingo" />
+
+        <Button
+            android:id="@+id/GuardarNuevo_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Guardar" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/irFrase_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="5sp"
+            android:layout_weight="1"
+            android:onClick="irFrase"
+            android:text="@string/btn_irFrase"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/irConfiguracionDesdeAgregar_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5sp"
+            android:layout_weight="1"
+            android:onClick="irConfiguracion"
+            android:text="@string/btn_IrConfigurar"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

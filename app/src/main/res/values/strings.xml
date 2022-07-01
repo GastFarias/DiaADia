@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">El Dia a Dia</string>
+    <string name="FraseDePrueba">Cargando Frase de este hermoso dia</string>
+    // Botones
+    <string name="btn_IrConfigurar">Configuraciones</string>
+    <string name="btn_irAgregarAvisos">Agregar Nuevo Aviso</string>
+    <string name="btn_irFrase">Volver Inicio</string>
+    <string name="tv_Ingreso">Ingreso</string>
+    <string name="google">Google</string>
+
+    // Agregar Aviso Activity
+    <string name="NuevoAviso">Nuevo Aviso</string>
+    <string name="Hora">Hora de Aviso</string>
+    <string name="NombreAnuncio">Nombre del nuevo aviso</string>
+    <string name="SeleccionarHora">Seleccionar Hora de Aviso</string>
+    <string name="Lunes">Lunes</string>
+    <string name="Martes">Martes</string>
+    <string name="Miercoles">Miercoles</string>
+    <string name="Jueves">Jueves</string>
+    <string name="Viernes">Viernes</string>
+    <string name="Sábado">Sábado</string>
+    <string name="Domingo">Domingo</string>
+    <string name="Guardar">Guardar</string>
+
+    // Configuraciones Activity
+    <string name="HabilitarNotificaciones">Habilitar Notificaciones</string>
+    <string name="GuardarCambios">Guardar Cambios</string>
+    <string name="GuardarHora">Guardar Hora</string>
+    <string name="HoraFrase">Cambiar la hora para la frase del dia</string>
+    <string name="VerFrasesAnuladas">Ver frases anuladas</string>
+
+
+</resources>
