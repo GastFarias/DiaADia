@@ -130,9 +130,9 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, "Proximamente... ", Toast.LENGTH_SHORT).show();
     }
     public void irConfiguracion(View view){
-        //Intent i = new Intent(getApplicationContext(),Configuracion_Activity.class);
-        //startActivity(i);
-        Toast.makeText(this, "Proximamente... ", Toast.LENGTH_SHORT).show();
+        Intent i = new Intent(getApplicationContext(),Configuracion_Activity.class);
+        startActivity(i);
+        //Toast.makeText(this, "Proximamente... ", Toast.LENGTH_SHORT).show();
     }
 
 

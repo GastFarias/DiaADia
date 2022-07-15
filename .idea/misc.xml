@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Pc/AndroidStudioProjects/ElDiaaDia/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1155" />
+        <entry key="..\:/Users/Pc/AndroidStudioProjects/ElDiaaDia/app/src/main/res/layout/activity_agregar_avisos.xml" value="0.24259259259259258" />
+        <entry key="..\:/Users/Pc/AndroidStudioProjects/ElDiaaDia/app/src/main/res/layout/activity_configuracion.xml" value="0.24259259259259258" />
+        <entry key="..\:/Users/Pc/AndroidStudioProjects/ElDiaaDia/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1155" />
         <entry key="..\:/Users/gasto/StudioProjects/DiaADia/app/src/main/res/layout/activity_agregar_avisos.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/gasto/StudioProjects/DiaADia/app/src/main/res/layout/activity_configuracion.xml" value="0.22826086956521738" />
       </map>
