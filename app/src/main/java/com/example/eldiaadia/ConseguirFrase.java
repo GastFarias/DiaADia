@@ -1,6 +1,17 @@
 package com.example.eldiaadia;
 
 import android.content.Context;
+import android.content.SharedPreferences;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import android.content.SharedPreferences;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -8,60 +19,34 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-
 import java.util.Calendar;
 
-
-public class MainActivity extends AppCompatActivity {
-
-    private static Calendar calendar;
-    private static int CodigoDia;
-    private static DatabaseReference mDatabase;
-    private static String frase;
-    private TextView TV_frase;
-    //private DatabaseReference mDatabase;
-    //private Calendar calendar;
-    //private int CodigoDia;
-    private  DataSnapshot dataSnapshot;
-    //public String frase;
-    private String frasedeldia;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        TV_frase = findViewById(R.id.Frase_textView);
+public class ConseguirFrase {
 
 
-        frasedeldia = ConseguirFrase.frase;
-        getFrase();
 
+    public static int CodigoDia;
+    static String frase;
 
-        SharedPreferences sharedPreferences = getSharedPreferences("frases", Context.MODE_PRIVATE);
-        //TV_frase.setText(sharedPreferences.getString("FraseDia", "Nulo") + "\n");
-        TV_frase.setText(frasedeldia + " \n ");
-
-        //TV_frase.setText("" + this.frasedeldia + ".\n");
-        //Toast.makeText(this, frasedeldia, Toast.LENGTH_SHORT).show();
-
+    public void setFrase(String frase) {
+        ConseguirFrase.frase = this.conseguirFrase();
     }
-     public void getFrase(){
-         final String[] frasedeldia = new String[1];
-        calendar = Calendar.getInstance();
+
+    public String conseguirFrase() {
+
+        final String[] frasedeldia = new String[1];
+        Calendar calendar = Calendar.getInstance();
         int dia = calendar.get(Calendar.DATE);
         int mes = calendar.get(Calendar.MONTH);
 
+        DatabaseReference mDatabase;
+
+
+
+
+
         //switch para generar el codigo del dia
-        switch (mes){
+        switch (mes) {
             case 1:
                 CodigoDia = dia;
                 break;
@@ -110,16 +95,18 @@ public class MainActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
                 long cant = snapshot.getChildrenCount();
-               // Toast.makeText(MainActivity.this, "cantidad " + cant, Toast.LENGTH_SHORT).show();
-                if (snapshot.exists()){
+                // Toast.makeText(MainActivity.this, "cantidad " + cant, Toast.LENGTH_SHORT).show();
+                if (snapshot.exists()) {
                     //Este metodo funciona pasando directamente el codigo que conocemos por codigo
                     /*String frase = snapshot.child("1").getValue().toString();
                     TV_frase.setText(frase);*/
                     int ban = 1;
+
                     while (ban == 1) {
                         try {
                             frase = snapshot.child(String.valueOf(CodigoDia)).getValue().toString();
                             ban = 0;
+
                         } catch (Exception e) {
                             //frase = snapshot.child("1").getValue().toString();
                             CodigoDia = (int) (CodigoDia - (cant));
@@ -132,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
 //                    editor.commit();
 
 
-                    TV_frase.setText("" + frase + "\n");
+                    //TV_frase.setText("" + frase + "\n");
                     //frasedeldia[0] = frase;
                 }
 
@@ -152,24 +139,8 @@ public class MainActivity extends AppCompatActivity {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         //DatabaseReference myRef = database.getReference("message");
         //myRef.setValue("Hello, World!");
-
-         //return frasedeldia[0];
+        return frase;
     }
-
-
-    public void irAgregarAvisos(View view){
-        //Intent i = new Intent(getApplicationContext(),AgregarAvisos_Activity.class);
-        //startActivity(i);
-        Toast.makeText(this, "Proximamente... ", Toast.LENGTH_SHORT).show();
-    }
-    public void irConfiguracion(View view){
-        Intent i = new Intent(getApplicationContext(),Configuracion_Activity.class);
-        startActivity(i);
-        //Toast.makeText(this, "Proximamente... ", Toast.LENGTH_SHORT).show();
-    }
-
-
-
-
 
 }
+

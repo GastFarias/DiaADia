@@ -77,6 +77,7 @@ public class Configuracion_Activity extends AppCompatActivity {
         calendar.setTimeInMillis(System.currentTimeMillis());
         calendar.set(Calendar.HOUR_OF_DAY, hora);
         calendar.set(Calendar.MINUTE, minutos);
+        calendar.set(Calendar.SECOND, 0);
         setAlarm(0,calendar, getApplicationContext());
 
     }
